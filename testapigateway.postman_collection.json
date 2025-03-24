@@ -1,0 +1,184 @@
+{
+	"info": {
+		"_postman_id": "47d2a2e1-0987-4d9b-9118-fc7de9a51e08",
+		"name": "testapigateway",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40805758"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"test999_09@gmail.com\",\r\n  \"password\": \"140203\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8765/userservice/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"userservice",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"test999_09@gmail.com\",\r\n  \"password\": \"140203\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8765/userservice/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"userservice",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createRoom",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MDFAZ21haWwuY29tIiwic2NvcGUiOiJVU0VSIiwiZXhwIjoxNzQzMzU4MTY4LCJpYXQiOjE3NDI3NTMzNjgsInVzZXJJZCI6MSwianRpIjoiMTgzNzEzMzMtZjQ4YS00Zjg3LThhODktNjc1OGQwZDQ1NTQ2In0.CBAnH0PVSOJZiLa4mdBa4xn4KLWUm9VcJlcOjJeLgQa0c1a0-ntTbPbHG1z21j54NVfee-Gk3X7DCKXpq-MX3Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": 1,\r\n    \"roomType\": \"SentimentalAnalisysSocialMedia\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8765/room/createRoom",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"room",
+						"createRoom"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "creatMainlink",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"mainlink\": \"https://www.facebook.com/profile.php?id=61573780019009\",\r\n  \"room_id\": 1,\r\n  \"user_id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8765/sentiment/createmainlink",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"sentiment",
+						"createmainlink"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sentimentanalysis",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"page_url\": \"https://www.facebook.com/profile.php?id=61573780019009\",\r\n    \"post_url\": \"https://www.facebook.com/photo?fbid=122096982062792667&set=a.122096982938792667\",\r\n    \"access_token\": \"EAAIAz0qbWDMBOxzOQagSjt4ArQjBGbnx6kmm7zy4NszNHKqfuKBhfO4Kg5HFfLB14Clp7wyhqiR1q5RhDwcWK532w24LrWs9ko5VdKbqjuY9HJZAPXWSLayyYz2D69o2JKbrZBuHXS7MCjh1qyvkC0LmoQQtb3E9XqbZAXHeStZCZBMz4f5sjV8wKz0sMbm1N\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8765/sentiment/sentimentAnalysis",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"sentiment",
+						"sentimentAnalysis"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getStatisticPercentage",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "getStatisticNumber",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
