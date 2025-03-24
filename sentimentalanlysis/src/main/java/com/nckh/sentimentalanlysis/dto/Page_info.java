@@ -9,9 +9,18 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Page_info {
+    public Integer mainlinkid;
     public String page_url;
     public String post_url;
     public String access_token;
+
+    public Integer getMainlinkid() {
+        return mainlinkid;
+    }
+
+    public void setMainlinkid(Integer mainlinkid) {
+        this.mainlinkid = mainlinkid;
+    }
 
     public String getPage_url() {
         return page_url;

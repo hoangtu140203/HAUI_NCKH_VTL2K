@@ -75,7 +75,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MDFAZ21haWwuY29tIiwic2NvcGUiOiJVU0VSIiwiZXhwIjoxNzQzMzU4MTY4LCJpYXQiOjE3NDI3NTMzNjgsInVzZXJJZCI6MSwianRpIjoiMTgzNzEzMzMtZjQ4YS00Zjg3LThhODktNjc1OGQwZDQ1NTQ2In0.CBAnH0PVSOJZiLa4mdBa4xn4KLWUm9VcJlcOjJeLgQa0c1a0-ntTbPbHG1z21j54NVfee-Gk3X7DCKXpq-MX3Q",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MDNAZ21haWwuY29tIiwic2NvcGUiOiJVU0VSIiwiZXhwIjoxNzQzNDI1NDY3LCJpYXQiOjE3NDI4MjA2NjcsInVzZXJJZCI6MywianRpIjoiYzU4YjY2ZWYtODNjOS00OWM3LTg5YzgtMjBkN2EwMmNjNDhkIn0.JrNHIWsKyn6-LvRtqu_FIEQdH-EJl8Tj1nA7lYtkyj96yReR1C8exVUXc7VD1DaltDRpYUlOeENAuODR4Bqodg",
 							"type": "string"
 						}
 					]
@@ -84,7 +84,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"userId\": 1,\r\n    \"roomType\": \"SentimentalAnalisysSocialMedia\"\r\n}",
+					"raw": "{\r\n    \"roomType\": \"SASocialMedia_Test2\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -109,11 +109,21 @@
 		{
 			"name": "creatMainlink",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MDNAZ21haWwuY29tIiwic2NvcGUiOiJVU0VSIiwiZXhwIjoxNzQzNDI1NDY3LCJpYXQiOjE3NDI4MjA2NjcsInVzZXJJZCI6MywianRpIjoiYzU4YjY2ZWYtODNjOS00OWM3LTg5YzgtMjBkN2EwMmNjNDhkIn0.JrNHIWsKyn6-LvRtqu_FIEQdH-EJl8Tj1nA7lYtkyj96yReR1C8exVUXc7VD1DaltDRpYUlOeENAuODR4Bqodg",
+							"type": "string"
+						}
+					]
+				},
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"mainlink\": \"https://www.facebook.com/profile.php?id=61573780019009\",\r\n  \"room_id\": 1,\r\n  \"user_id\": 1\r\n}",
+					"raw": "{\r\n  \"mainlink\": \"https://www.facebook.com/profile.php?id=61573780019009\",\r\n  \"room_id\": 6\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -138,11 +148,21 @@
 		{
 			"name": "sentimentanalysis",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MDNAZ21haWwuY29tIiwic2NvcGUiOiJVU0VSIiwiZXhwIjoxNzQzNDI1NDY3LCJpYXQiOjE3NDI4MjA2NjcsInVzZXJJZCI6MywianRpIjoiYzU4YjY2ZWYtODNjOS00OWM3LTg5YzgtMjBkN2EwMmNjNDhkIn0.JrNHIWsKyn6-LvRtqu_FIEQdH-EJl8Tj1nA7lYtkyj96yReR1C8exVUXc7VD1DaltDRpYUlOeENAuODR4Bqodg",
+							"type": "string"
+						}
+					]
+				},
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"page_url\": \"https://www.facebook.com/profile.php?id=61573780019009\",\r\n    \"post_url\": \"https://www.facebook.com/photo?fbid=122096982062792667&set=a.122096982938792667\",\r\n    \"access_token\": \"EAAIAz0qbWDMBOxzOQagSjt4ArQjBGbnx6kmm7zy4NszNHKqfuKBhfO4Kg5HFfLB14Clp7wyhqiR1q5RhDwcWK532w24LrWs9ko5VdKbqjuY9HJZAPXWSLayyYz2D69o2JKbrZBuHXS7MCjh1qyvkC0LmoQQtb3E9XqbZAXHeStZCZBMz4f5sjV8wKz0sMbm1N\"\r\n}",
+					"raw": "{\r\n    \"mainlinkid\": 7,\r\n    \"page_url\": \"https://www.facebook.com/profile.php?id=61573780019009\",\r\n    \"post_url\": \"https://www.facebook.com/photo/?fbid=122112123872792667&set=a.122096982938792667\",\r\n    \"access_token\": \"EAAIAz0qbWDMBOxzOQagSjt4ArQjBGbnx6kmm7zy4NszNHKqfuKBhfO4Kg5HFfLB14Clp7wyhqiR1q5RhDwcWK532w24LrWs9ko5VdKbqjuY9HJZAPXWSLayyYz2D69o2JKbrZBuHXS7MCjh1qyvkC0LmoQQtb3E9XqbZAXHeStZCZBMz4f5sjV8wKz0sMbm1N\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -167,16 +187,72 @@
 		{
 			"name": "getStatisticPercentage",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MDNAZ21haWwuY29tIiwic2NvcGUiOiJVU0VSIiwiZXhwIjoxNzQzNDI1NDY3LCJpYXQiOjE3NDI4MjA2NjcsInVzZXJJZCI6MywianRpIjoiYzU4YjY2ZWYtODNjOS00OWM3LTg5YzgtMjBkN2EwMmNjNDhkIn0.JrNHIWsKyn6-LvRtqu_FIEQdH-EJl8Tj1nA7lYtkyj96yReR1C8exVUXc7VD1DaltDRpYUlOeENAuODR4Bqodg",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8765/sentiment/getpercentage?id=26",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"sentiment",
+						"getpercentage"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "26"
+						}
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "getStatisticNumber",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MDNAZ21haWwuY29tIiwic2NvcGUiOiJVU0VSIiwiZXhwIjoxNzQzNDI1NDY3LCJpYXQiOjE3NDI4MjA2NjcsInVzZXJJZCI6MywianRpIjoiYzU4YjY2ZWYtODNjOS00OWM3LTg5YzgtMjBkN2EwMmNjNDhkIn0.JrNHIWsKyn6-LvRtqu_FIEQdH-EJl8Tj1nA7lYtkyj96yReR1C8exVUXc7VD1DaltDRpYUlOeENAuODR4Bqodg",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8765/sentiment/getnumber?id=26",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"sentiment",
+						"getnumber"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "26"
+						}
+					]
+				}
 			},
 			"response": []
 		}

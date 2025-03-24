@@ -8,4 +8,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface MainLinkRepository extends JpaRepository<MainLink, Integer> {
     MainLink findFirstByMainlink(String mainlink);
+    MainLink findMainLinkByMainlinkId(Integer mainlinkId);
 }

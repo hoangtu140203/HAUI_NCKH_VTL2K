@@ -11,6 +11,9 @@ import com.nckh.sentimentalanlysis.service.CallPhoBERTService;
 import com.nckh.sentimentalanlysis.service.SenAnalysisService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -47,7 +50,11 @@ public class TestCrawlController {
 
 
     @PostMapping("/createmainlink")
-    public MainLink createMainLink(@RequestBody CreatMainLink creatMainLink) {
+    public MainLink createMainLink(@RequestHeader("X-User-Id") String userid,@RequestBody CreatMainLink creatMainLink) {
+        if (StringUtils.isEmpty(userid)){
+            return null;
+        }
+        creatMainLink.setUser_id(Integer.parseInt(userid));
         return senAnalysisService.saveMainLink(creatMainLink.getMainlink(), creatMainLink.getRoom_id(), creatMainLink.getUser_id());
     }
 

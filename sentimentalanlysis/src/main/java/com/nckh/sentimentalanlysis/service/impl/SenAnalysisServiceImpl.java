@@ -76,7 +76,7 @@ public class SenAnalysisServiceImpl implements SenAnalysisService {
     public SenAnalysisRes sentimentAnalysis(Page_info page_info) {
         CrawledData crawledData = crawlData(page_info);
 
-        MainLink mainLink = mainLinkRepository.findFirstByMainlink(page_info.getPage_url());
+        MainLink mainLink = mainLinkRepository.findMainLinkByMainlinkId(page_info.getMainlinkid());
 
 
         List<TextIn> textIns = new ArrayList<>();
